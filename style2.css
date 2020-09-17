@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,100;1,500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ---------------------Variables for color palete---------------------- */
+:root{
+    --primary: #048BA8;
+    --secondary: #0DB39E;
+    /* --secondary: #3eb9a9; */
+    --aqua: #16DB93;
+    --darkblue:#54478C;
+    --saphireblue:#2C699A;
+    --lightgreen:#83E377;
+    --inchworm:#B9E769;
+    --corn:#EFEA5A;
+    --maize:#F1C453;
+    --sandybrown:#F29E4C;
+}
+
+/* -----------------Utility Styles--------------------------------------- */
+button, input{
+    outline: none;
+    border: none;
+}
+i{
+    cursor: pointer;
+}
+li{
+list-style-type:none;
+}
+
+/* -----------------------------Header Starts---------------------------- */
+header{
+    /* background: var(--secondary); */
+    /* height: 13vh; */
+    position: relative;
+}
+
+.top-bar{
+    /* background: salmon; */
+    display: flex;
+    /* justify-content: space-around;
+    align-items: center; */
+}
+.top-bar form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 0.7rem;
+}
+
+.top-bar .fa-bars{
+    color: var(--secondary);
+    background:none;
+    font-size: 1.5rem;
+}
+  
+.top-bar form input{
+    /* position: relative; */
+    width: 18rem;
+    border: 1px solid #dddddd;
+    outline: none !important;
+}
+.top-bar form .fa-search{
+    position: absolute;
+    right:.9rem;
+    top: 1.3rem;
+    transform: translateY(-50%);
+    color: var(--secondary);
+    background:white;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    width: 80% !important;
+}
+.logo.hide{
+    display: none;
+}
+.logo .tagline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: yellow; */
+    height: 100%;
+    /* position: relative; */
+}
+.logo .tagline p{
+    /* background: chocolate; */
+    display: flex;
+    align-items: center;
+    margin: .1rem 0 0 0 ;    
+}
+.logo img{
+    width: 4rem;
+    border-radius: 50%;
+}
+.cart{
+    display: flex;
+    /* background: mediumaquamarine; */
+    justify-content: space-between;
+    align-items: center;
+}
+.container-fluid{
+    margin: 0 !important;
+    width: 100vw !important;
+}
+.cart i{
+    margin: 0 0.3rem 0 0;
+    padding: 6px;
+    border-radius: 20%;
+    background: var(--secondary);
+    color: #f1f1f1;
+    font-size: .7rem;
+}
+.cart span{
+    font-weight: 300 !important;
+  
+}
+/* ------Navbar---------- */
+nav{
+    /* width: 18rem; */
+    width: 0;
+    position: fixed;
+    right: 0;
+    height: 100%;
+    background-color: var(--secondary);
+    background: black linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+    top: 0;
+    padding: 2rem 0;
+    transition: linear .3s;
+    z-index: 10000000;
+}
+nav ul li{
+    font-weight: 400;
+    margin: .1rem 1.2rem;
+    letter-spacing: 1px;
+  
+}
+
+nav li:hover,
+nav .dropdown-menu a:hover {
+    background: linear-gradient(rgba(220,100,0,.1),rgba(0,0,0,.2));
+
+}
+nav .fa-chevron-right{
+    color: var(--secondary);
+    font-size: 2rem;
+    margin-left: 18rem !important;
+}
+nav .dropdown-menu{
+    background: black linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) !important;
+
+}
+nav ul li a,
+nav .dropdown-menu a{
+    color:white !important;
+    font-weight: 300;
+}
+nav ul li a{
+    border-bottom: 1px solid #222222;
+}
+.navbar-toggler{
+    display: flex;
+    justify-content: flex-end !important;
+    position: absolute;
+    right: 1rem;
+}
+
+.top-bar.sticky{
+    /* background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)); */
+    position: fixed;
+     top: 0;
+    z-index: 99;
+    width: 100%;
+    transition: .3s linear;
+    color: white;
+    background: rgb(46,45,45) linear-gradient(rgba(200,200,200,0.1),rgba(0,0,0,0.3)); 
+    padding: .8rem 0;
+    font-size: .9rem
+}
+nav.sticky ul li a{
+    /* color: white !important; */
+}
+nav ul{
+    /* background-color: thistle; */
+}
+
+
+/* -----------------------------------------FORM STARTS----------------------=-------------- */
+.form-background{
+    /* position: relative; */
+}
+button, input{
+    outline: none !important; 
+}
+.form-bg{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    z-index: 9;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)) ;
+    display: none;
+}
+.form-box{
+    margin: auto;
+    width: 30rem;
+    height: 33rem;
+    background: var(--maize);
+    position: relative;
+    padding: .3rem;
+    box-shadow: 0 0 10px 0px rgba(45, 45, 46, .5);
+    color: white;
+}
+.fa-window-close{
+    position: absolute;
+    top:1rem;
+    right: 1rem;
+    color: var(--darkblue);
+    font-size: 1.4rem;
+}
+.button-box{
+    width: 240px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 10px 0px rgba(45, 45, 46, .5);
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    font-size: 1rem;
+    color: white;
+}
+#btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 100%;
+    background:  var(--darkblue);
+    border-radius: 2rem;
+    transition: linear .3s;
+}
+.social-icons{
+    margin: 2rem auto;
+    text-align: center;
+}
+.social-icons i {
+    font-size: 2.2rem;
+    margin: 0 .8rem;
+    box-shadow: 0 0 20px rgba(247, 137, 97,.5);
+    color: var(--primary);
+    cursor: pointer;
+}
+.input-group{
+    position: absolute;
+    top: 11.5rem;
+    width: 17.6rem;
+}
+.input-field{
+    width: 100%;
+    padding: .8rem 0;
+    margin: .4rem 0;
+    border: none;
+    border-bottom: 1px solid #7c7c7c;
+    background: transparent;
+    color: rgb(45, 45, 46);
+}
+#submit-btn{
+    width: 84%;
+    display: block;
+    padding: .3rem 2rem;
+    background: var(--primary);
+    border-radius: .6rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+#login{
+    left: 120px;
+}
+#sign-up{
+    left: 500px;
+
+}
+.form-box{
+    transition: linear .3s;
+    overflow: hidden;
+}
+.check-box{
+    margin-top: 1rem;
+}
+
+/* -----------------------------------------FORM ENDS----------------------=-------------- */
+
+
+/* -----------------------------------------CAROUSEL STARTS----------------------=-------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Mulish', sans-serif;
+}
+
+.col-md-9,
+.col{
+    padding-left: 0;
+}
+.carousel-bg{
+    width: 100%;
+    background: #81ecec;
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 100%;
+    padding: 4em;
+    background: rgb(46,45,45);
+    color: white;
+    box-shadow: 0 4px 8px 2px rgba(0,0,0,0.5), 0 4px 8px 2px rgba(0,0,0,0.5);
+}
+.row{
+    margin: 0;
+}
+.path{
+    color: gray;
+    /* margin: 1rem; */
+}
+.path a{
+    color: white;
+}
+.info{
+    padding: 6vh 0;
+
+}
+.checked{
+    color: ;
+    margin-right: 10px;
+}
+.carousel-inner img{
+    width: 350px;
+    height: 280px;
+    border-radius: 1.0rem;
+    /* height: 100px; */
+    /* width:75%; */
+    padding: 1rem;
+}
+.carousel-inner .fa-heart{
+    font-size: 2rem;
+    color: #f1f1f1;
+}
+.carousel-inner .fa-heart:hover{
+    color: #F29E4C;
+}
+#reviews{
+    margin-left: 3vh;
+}
+.prices{
+    margin-top: 1rem;
+}
+label.radio{
+    cursor: pointer;
+}
+label.radio span{
+    padding: 1vh 4vh;
+    background: rgb(54,54,54);
+    display: inline-block;
+    color: gray;
+    margin-right: 2vh;
+    border: 1px solid transparent;
+
+}
+label.radio input:checked+span{
+    border: 1px solid white;
+    color: white;
+}
+label.radio input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.carousel-control-prev{
+    width: 0;
+}
+.carousel-control-next{
+    left: 7vh;
+}
+/* -----------------------------------------CAROUSEL ENDS----------------------=-------------- */
+
+
+/* ---------------------------------FOOTER STARTS---------------------------------------- */
+footer{
+    background: var(--secondary);
+    color: rgb(248, 236, 236);
+    padding-top: 2rem;
+}
+.social-media-links a{
+    color: var(--darkblue);
+    font-weight: 500 !important;
+    text-shadow: 0px 0px 2px 5px black !important;
+}
+.social-media-icons i{
+    padding: .4rem;
+    color: var(--darkblue);
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+    /* color: var(--primary); */
+}
+.newsletter{
+    padding: 1rem 0;
+}
+.newsletter input{
+    padding:.5rem 1rem ;
+    /* border-radius: 30px; */
+}
+.newsletter button{
+    background: var(--darkblue);
+    padding: .6rem 1rem;
+    color: white;
+    border-radius: .3rem;
+}
+/* ---------------------------------FOOTER ENDS---------------------------------------- */

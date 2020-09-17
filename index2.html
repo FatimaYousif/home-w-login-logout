@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Town's Grocery Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <div class="">
+          <div class="row top-bar">
+            <div class="col-lg-6 col-md-8 col-12 logo " id="logo-part">
+                <a class="navbar-brand" href="#"><img src="images/lg.png" alt=""></a>
+                <div class="tagline"><p>Your Neighbor's Grocery Store!</p> </div>
+                <form>
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <i class="fas fa-search"></i>
+                </form>
+            </div>
+            <div class="col-lg-6 col-md-4 col-12 cart">          
+                    <div><i class="fas fa-shopping-cart"></i><span>CART</span></div>
+                    <div><i class="fas fa-heart"></i><span>Favourites</span> </div>
+                    <div> <i class="fas fa-user" onclick="logout()"></i><span>Logout</span> </div>
+                    <div id="menu-icon"><i class="fas fa-bars" onclick="openMenu()"></i></div>           
+    
+                </div>
+            </div>
+        </div>
+  
+      
+         <!-- --------------------------------NAVBAR STARTS----------------------------------- -->
+  
+          <nav> 
+            <i class="fas fa-chevron-right" onclick="closeMenu()" ><a href="javascript:void(0)"></a> </i>
+  
+            <ul>
+    
+                <li class="nav-item ">
+                  <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cosmetics
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Gents Makeup</a>
+                    <a class="dropdown-item" href="#">Ladies Makeup</a>
+                  </div>
+                </li>
+                <li class="nav-item ">
+                    <!-- <a class="nav-link" href="#fashion">Fashion</a> -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Food
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Fruits</a>
+                        <a class="dropdown-item" href="#">Vegetables</a>
+                      </div>
+                  </li>
+                <li class="nav-item">
+                  <!-- <a class="nav-link" href="#electronics">Electronics</a> -->
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Fashion
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Gents</a>
+                    <a class="dropdown-item" href="#">Ladies</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                    <!-- <a class="nav-link" href="#accessories">Accessories</a> -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Electronics
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Smart Gadgets</a>
+                        <a class="dropdown-item" href="#">Smart Gadgets</a>
+                      </div>
+                  </li>
+                  <li class="nav-item">
+                    <!-- <a class="nav-link" href="#Testimonials">Testimonials</a> -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Accessories
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Jewellery</a>
+                        <a class="dropdown-item" href="#">handbags</a>
+                      </div>
+                  </li>
+        </ul>
+    </nav>
+      </header>
+  
+    
+
+
+
+      <!-- -----------------------------------------------------------CAROUSEL--------------------------------------------------- -->
+      <div class="carousel-bg" id="home">
+        <div class="container">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <div class="path text-uppercase">Home / <a>Products </a></div>
+                            <div class="row">
+                                <div class="col-md-6 text-center align-self-center">
+                                    <img src="images/veg1.jpeg" alt="" class="img-fluid" id="slider-img">
+                                </div>
+                                <div class="col-md-6 info">
+                                    <div class="row title mb-2">
+                                        <div class="col-md-9 col-12">
+                                            <h1>Food Corner</h1>
+                                            <p>All types of things are here that you require</p>
+                                        </div>
+                                        <div class="col-md-3 col-12 text-right">
+                                            <a href="#"><i class="fas fa-heart"></i></a>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star-half-alt checked"></i>
+                                    <span id="reviews">233435 Reviews</span>
+                                    <div class="row prices">
+                                        <label for="pro" class="radio">
+                                            <input type="radio" name="product" value="Vegetables"  id="pro" checked>
+                                            <span>
+                                                <div class="row">
+                                                    <big><b>Fresh Vegetables</b></big>
+                                                </div>
+                                                <div class="row">
+                                                    Rs. 1500
+                                                </div>
+                                            </span>
+                                        </label>
+
+                                        <label for="pro1" class="radio">
+                                            <input type="radio" name="product" value="Vegetables" id="pro1">
+                                            <span>
+                                                <div class="row">
+                                                    <big><b>Fresh/Frozen Meat</b></big>
+                                                </div>
+                                                <div class="row">
+                                                    Rs. 1500
+                                                </div>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row lower">
+                                <div class="col">
+                                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
+                                        data-slide="prev">
+                                        <i class="fas fa-arrow-left"></i>
+
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"
+                                        data-slide="next">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                                <div class="col text-right align-self-center">
+                                    <button class="btn">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- -------------------------------------- -->
+                    <div class="carousel-item ">
+                        <div class="card">
+                            <div class="path text-uppercase">Home / Products / <a>Slider</a></div>
+                            <div class="row">
+                                <div class="col-md-6 text-center align-self-center">
+                                    <img src="images/kurti.jpeg" alt="" class="img-fluid" id="slider-img1">
+                                </div>
+                                <div class="col-md-6 info">
+                                    <div class="row title mb-2">
+                                        <div class="col-md-9 col-12">
+                                            <h1>Ladies and Gents</h1>
+                                            <p>All types of things are here that you require</p>
+                                        </div>
+                                        <div class="col-md-3 col-12 text-right">
+                                            <a href="#"><i class="fas fa-heart"></i></a>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star-half-alt checked"></i>
+                                    <span id="reviews">233435 Reviews</span>
+                                    <div class="row prices">
+                                        <label for="pro2" class="radio">
+                                            <input type="radio" name="product1" value="Vegetables"  id="pro2" checked>
+                                            <span>
+                                                <div class="row">
+                                                    <big><b>Ladies Corner</b></big>
+                                                </div>
+                                                <div class="row">
+                                                    Rs. 2500
+                                                </div>
+                                            </span>
+                                        </label>
+
+                                        <label for="pro3" class="radio">
+                                            <input type="radio" name="product1" value="Vegetables" id="pro3">
+                                            <span>
+                                                <div class="row">
+                                                    <big><b>Gents Corner</b></big>
+                                                </div>
+                                                <div class="row">
+                                                    Rs. 1500
+                                                </div>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row lower">
+                                <div class="col">
+                                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
+                                        data-slide="prev">
+                                        <i class="fas fa-arrow-left"></i>
+
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"
+                                        data-slide="next">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                                <div class="col text-right align-self-center">
+                                    <button class="btn">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="path text-uppercase">Home / Products / <a>Slider</a></div>
+                            <div class="row">
+                                <div class="col-md-6 text-center align-self-center">
+                                    <img src="images/apple1.jpeg" alt="" class="img-fluid" id="slider-img2">
+                                </div>
+                                <div class="col-md-6 info">
+                                    <div class="row title mb-2">
+                                        <div class="col-md-9 col-12">
+                                            <h1>Electronics</h1>
+                                            <p>Get all the Gadgets on a feasible amount</p>
+                                        </div>
+                                        <div class="col-md-3 col-12 text-right">
+                                            <a href="#"><i class="fas fa-heart"></i></a>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star-half-alt checked"></i>
+                                    <span id="reviews">233435 Reviews</span>
+                                    <div class="row prices">
+                                        <label for="pro4" class="radio">
+                                            <input type="radio" name="product2" value="Vegetables" checked id="pro4">
+                                            <span>
+                                                <div class="row">
+                                                    <big><b>Latest Gadgets</b></big>
+                                                </div>
+                                                <div class="row">
+                                                    Rs. 1500
+                                                </div>
+                                            </span>
+                                        </label>
+
+                                        <label for="pro5" class="radio">
+                                            <input type="radio" name="product2" value="Vegetables" id="pro5">
+                                            <span>
+                                                <div class="row">
+                                                    <big><b>Second Hand Sets</b></big>
+                                                </div>
+                                                <div class="row">
+                                                    Rs. 1500
+                                                </div>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row lower">
+                                <div class="col">
+                                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
+                                        data-slide="prev">
+                                        <i class="fas fa-arrow-left"></i>
+
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"
+                                        data-slide="next">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                                <div class="col text-right align-self-center">
+                                    <button class="btn">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+        <!-- ------------------------------------------------/ -->
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit possimus ipsum odit beatae! Impedit exercitationem ut saepe, ex blanditiis sint sequi obcaecati dicta laboriosam libero, id provident ipsa aspernatur quia molestias nemo quod totam incidunt pariatur explicabo! Doloremque ut quisquam rem sit magnam. Quasi nemo ut neque vero magnam at, repellat voluptates eius. Facere aperiam, reprehenderit sed dolorum placeat totam maxime, temporibus, incidunt doloribus provident itaque? Debitis nisi doloribus veniam sunt consequuntur expedita reprehenderit alias, soluta dolorem, ipsum aspernatur laudantium saepe quidem placeat? Aut nemo recusandae eligendi accusamus fugit, praesentium, temporibus aliquam maxime nostrum totam eum placeat veritatis dolorum quo odit dolor autem voluptas reiciendis. Nam ipsum suscipit ad excepturi, eaque, labore doloremque nulla quo consequatur voluptatem, est qui quod saepe fuga quibusdam eius molestiae consequuntur modi placeat. Repudiandae adipisci facilis fuga, magnam saepe voluptate, nemo vel explicabo unde harum cupiditate iure ut fugiat. Tempore, laboriosam, hic debitis quia adipisci velit aliquid vero corporis eos enim voluptatibus, magni nesciunt doloremque ea numquam maiores possimus rerum qui a quaerat illo dolorum dolor deleniti. Animi adipisci, est veritatis maiores mollitia nulla velit quos similique odio quod nisi, sapiente quas saepe neque iste. Amet aut corporis id sed inventore provident culpa, fuga rerum est molestias, vero quibusdam excepturi maxime dignissimos labore, hic laboriosam neque ratione saepe impedit. Illo blanditiis esse reprehenderit, odio illum laboriosam vel numquam iure ab cumque! Atque porro dolorem, odio debitis nam eligendi sed. Nobis cumque sapiente earum autem, ad assumenda corporis placeat a tempore quae deleniti minus id, unde nam maiores deserunt, ea quidem provident expedita impedit sequi quasi commodi aut quos? Repellendus, fugit explicabo. Odit veritatis nesciunt aspernatur mollitia repudiandae consequuntur voluptatum iste! Et similique obcaecati, atque voluptas veritatis ullam explicabo debitis, qui, quidem rerum repellendus nulla praesentium? Impedit sed quos eius possimus, quidem veniam natus dolor aspernatur error nihil laudantium repellendus ducimus at eveniet reprehenderit earum quam harum aliquid qui corporis eos? Quaerat sapiente reprehenderit voluptatibus ipsum vero eveniet autem beatae consequatur soluta. Vel magni facilis quam accusamus debitis est provident. Iure magni, sapiente dolor, velit possimus odit harum fugit fuga earum accusamus architecto eligendi recusandae, iusto rerum vel eveniet at quidem dolore. Rerum non veritatis odio voluptatem, voluptatibus consectetur ea cumque in totam explicabo eveniet dolor placeat porro? Alias modi sunt culpa veritatis ducimus aspernatur molestias dolorem quibusdam accusantium. Maxime deserunt ea adipisci voluptas, suscipit dolorem tempore mollitia iste libero qui veniam? Ad, mollitia omnis dolorem assumenda, alias aspernatur odit consectetur delectus possimus dignissimos accusantium repudiandae odio error voluptatem eligendi, magni a sed quod. Obcaecati harum aliquam quae eaque cupiditate doloribus nostrum repellat architecto quisquam recusandae at ea eius asperiores itaque dolor, sapiente blanditiis provident nam autem voluptatem reiciendis voluptatum! In corporis ea magni sint harum atque maxime praesentium a sit deleniti maiores architecto quisquam unde odio earum, dolor porro officiis repudiandae, nobis fugit temporibus libero possimus? Laborum tempora non sunt sed laboriosam odit consectetur, eos, voluptatum totam molestias nostrum quod ratione commodi est perferendis minima ullam eum error pariatur veniam debitis dolore? Enim, quos quibusdam.</p>
+       
+       
+       <footer>
+           <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="about-us">
+                        <h3>About Town's Grocery</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ipsa adipisci, deleniti neque saepe beatae veniam dolore accusamus aspernatur qui!</p>
+                   
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="social-media-links">
+                        <h3>Quick Links</h3>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Cosmetics</a></li>
+                        <li><a href="#">Food</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Electronics</a></li>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 mx-auto">
+                    <div class="social-media-icons">
+                        <h3>Connect</h3>
+                        <span><i class="fab fa-facebook-square"></i></span>
+                        <span><i class="fab fa-instagram-square"></i></span>
+                        <span><i class="fab fa-linkedin"></i></span>
+                        <span><i class="fab fa-whatsapp-square"></i></span>
+                       
+                    </div>
+                    <div class="newsletter">
+                        <h4>Newsletter</h4>
+                       <input type="email"placeholder="Email"> <button type="submit">Send</button>
+                    </div>
+             </div>
+             <p class="mx-auto">Copyrights &copy 2020 reserved to Team Kalam, Tech Karo</p> 
+           </div>          
+           </div>
+       </footer>
+        <script src="script2.js"></script>
+        <!-- <script src="form.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
